@@ -1,0 +1,64 @@
+"use client"
+
+import Image from "next/image"
+import { motion } from "framer-motion"
+
+export function HeroSection() {
+  return (
+    <section className="relative flex flex-col items-center gap-8 pt-16 pb-4 md:gap-10 md:pt-24">
+      {/* Profile Photo */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="relative"
+      >
+        <div className="absolute -inset-4 rounded-full bg-teal/12 blur-2xl" />
+        <div className="relative h-36 w-36 overflow-hidden rounded-full shadow-2xl shadow-teal/20 ring-[3px] ring-white/80 md:h-44 md:w-44">
+          <Image
+            src="/images/alyssa-profile.jpg"
+            alt="許耀云 Alyssa 個人照"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
+      </motion.div>
+
+      {/* Name with Ambient Golden Glow */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="relative flex flex-col items-center gap-3"
+      >
+        {/* Golden glow behind name */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-44 w-72 pointer-events-none"
+          style={{
+            background: "radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 75%)",
+          }}
+        />
+        <h1 className="relative text-5xl font-black tracking-tight text-charcoal font-serif md:text-6xl">
+          {"許耀云"}
+        </h1>
+        <p className="relative text-lg font-semibold tracking-[0.35em] text-teal/70 md:text-xl">
+          Alyssa
+        </p>
+        <p className="relative mt-1 text-sm font-medium tracking-[0.18em] text-warm-gray md:text-base">
+          {"永續策略顧問 ESG Consultant"}
+        </p>
+      </motion.div>
+
+      {/* Slogan */}
+      <motion.blockquote
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="text-center font-serif text-lg leading-relaxed tracking-wider text-teal/80 md:text-xl"
+      >
+        {"「剛柔並濟耀新局，永續賦能云水齊」"}
+      </motion.blockquote>
+    </section>
+  )
+}
