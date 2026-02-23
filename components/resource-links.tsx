@@ -32,35 +32,37 @@ export function ResourceLinks() {
         animate="visible"
         className="flex flex-col gap-4"
       >
-        {/* LinkedIn Card */}
+        {/* LinkedIn Card - Updated with user provided link */}
         <motion.a
           variants={itemVariants}
-          href="https://www.linkedin.com/in/alyssa-hsu-esg/"
+          href="https://www.linkedin.com/public-profile/settings"
           target="_blank"
           rel="noopener noreferrer"
-          className="glass-card glass-card-hover group flex items-center gap-4 p-6"
+          className="glass-card glass-card-hover group flex items-center gap-4 p-6 border-2 border-white/30"
         >
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20">
-            <Linkedin className="h-5 w-5 text-gold" />
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/30 shadow-inner">
+            <Linkedin className="h-6 w-6 text-white" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-base font-bold text-white truncate">{"LinkedIn 個人檔案"}</p>
-            <p className="text-sm text-white/90 mt-0.5">{"聯繫我以獲取更多專業見解"}</p>
+            <p className="text-base font-black text-white truncate">{"LinkedIn 個人檔案"}</p>
+            <p className="text-sm text-white/90 mt-0.5 font-medium">{"點擊與我建立專業聯繫"}</p>
           </div>
-          <ExternalLink className="h-4 w-4 shrink-0 text-white/40 transition-colors group-hover:text-gold" />
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 group-hover:bg-gold transition-colors">
+            <ExternalLink className="h-4 w-4 text-white" />
+          </div>
         </motion.a>
 
         {/* Certification Card */}
         <motion.div
           variants={itemVariants}
-          className="glass-card group flex items-center gap-4 p-6"
+          className="glass-card group flex items-center gap-4 p-6 opacity-90"
         >
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20">
             <FileCheck className="h-5 w-5 text-gold" />
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-base font-bold text-white truncate">{"專業證照"}</p>
-            <p className="text-sm text-white/90 mt-0.5">{"ISO 14064-1 Lead Auditor / ISO 14067"}</p>
+            <p className="text-sm text-white/80 mt-0.5">{"ISO 14064-1 Lead Auditor / ISO 14067"}</p>
           </div>
         </motion.div>
       </motion.div>
