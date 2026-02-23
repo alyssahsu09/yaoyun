@@ -19,11 +19,11 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="flex flex-col items-center gap-3 pt-8 pb-4 text-center">
-          <div className="h-px w-20 bg-teal/10" />
-          <p className="text-xs text-warm-gray mt-3 tracking-wide">
+          <div className="h-px w-20 bg-teal/20" />
+          <p className="text-sm font-bold text-charcoal mt-3 tracking-wide">
             {"© 2026 許耀云 Alyssa | 永續策略顧問"}
           </p>
-          <p className="text-[11px] text-warm-gray/50 italic font-serif">
+          <p className="text-xs text-teal font-serif font-medium italic">
             {"剛柔並濟耀新局，永續賦能云水齊"}
           </p>
         </footer>

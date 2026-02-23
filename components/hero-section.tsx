@@ -42,11 +42,11 @@ export function HeroSection() {
         <h1 className="relative text-5xl font-black tracking-tight text-charcoal font-serif md:text-6xl">
           {"許耀云"}
         </h1>
-        <p className="relative text-lg font-semibold tracking-[0.35em] text-teal/70 md:text-xl">
+        <p className="relative text-lg font-bold tracking-[0.35em] text-teal md:text-xl">
           Alyssa
         </p>
-        <p className="relative mt-1 text-sm font-medium tracking-[0.18em] text-warm-gray md:text-base">
-          {"永續策略顧問 ESG Consultant"}
+        <p className="relative mt-1 text-base font-semibold tracking-wide text-charcoal/80 md:text-lg">
+          {"永續策略顧問 | 科技供應鏈減碳專家"}
         </p>
       </motion.div>
 
@@ -55,7 +55,7 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className="text-center font-serif text-lg leading-relaxed tracking-wider text-teal/80 md:text-xl"
+        className="text-center font-serif text-lg leading-relaxed tracking-wider text-teal font-medium md:text-xl"
       >
         {"「剛柔並濟耀新局，永續賦能云水齊」"}
       </motion.blockquote>

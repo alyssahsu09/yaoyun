@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FileDown, Landmark, ExternalLink } from "lucide-react"
+import { Linkedin, FileCheck, ExternalLink } from "lucide-react"
 
 const containerVariants = {
   hidden: {},
@@ -22,9 +22,9 @@ export function ResourceLinks() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.95 }}
-        className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.25em] text-warm-gray"
+        className="mb-6 text-center text-sm font-bold uppercase tracking-[0.25em] text-charcoal"
       >
-        {"資源中心"}
+        {"專業連結"}
       </motion.h2>
       <motion.div
         variants={containerVariants}
@@ -32,41 +32,37 @@ export function ResourceLinks() {
         animate="visible"
         className="flex flex-col gap-4"
       >
-        {/* Priority Gold Card */}
+        {/* LinkedIn Card */}
         <motion.a
           variants={itemVariants}
-          href="https://www.cca.gov.tw/affairs/carbon-fee-fund/2301.htmlf"
+          href="https://www.linkedin.com/in/alyssa-hsu-esg/"
           target="_blank"
           rel="noopener noreferrer"
           className="glass-card glass-card-hover group flex items-center gap-4 p-6"
         >
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/12">
-            <FileDown className="h-5 w-5 text-gold" />
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20">
+            <Linkedin className="h-5 w-5 text-gold" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-base font-semibold text-white truncate">{"2026 碳費應對指南"}</p>
-            <p className="text-sm text-white/50 mt-0.5">{"環境部氣候變遷署"}</p>
+            <p className="text-base font-bold text-white truncate">{"LinkedIn 個人檔案"}</p>
+            <p className="text-sm text-white/90 mt-0.5">{"聯繫我以獲取更多專業見解"}</p>
           </div>
-          <ExternalLink className="h-4 w-4 shrink-0 text-charcoal/30 transition-colors group-hover:text-charcoal/60" />
+          <ExternalLink className="h-4 w-4 shrink-0 text-white/40 transition-colors group-hover:text-gold" />
         </motion.a>
 
-        {/* Policy Glass Card */}
-        <motion.a
+        {/* Certification Card */}
+        <motion.div
           variants={itemVariants}
-          href="https://www.fsc.gov.tw/ch/home.jsp?id=310&parentpath=0%2C2"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="glass-card glass-card-hover group flex items-center gap-4 p-6"
+          className="glass-card group flex items-center gap-4 p-6"
         >
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/12">
-            <Landmark className="h-5 w-5 text-gold" />
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20">
+            <FileCheck className="h-5 w-5 text-gold" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-base font-semibold text-white truncate">{"金管會重大政策"}</p>
-            <p className="text-sm text-white/50 mt-0.5">{"金融監督管理委員會"}</p>
+            <p className="text-base font-bold text-white truncate">{"專業證照"}</p>
+            <p className="text-sm text-white/90 mt-0.5">{"ISO 14064-1 Lead Auditor / ISO 14067"}</p>
           </div>
-          <ExternalLink className="h-4 w-4 shrink-0 text-white/25 transition-colors group-hover:text-gold" />
-        </motion.a>
+        </motion.div>
       </motion.div>
     </section>
   )
