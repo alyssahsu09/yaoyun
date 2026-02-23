@@ -40,7 +40,7 @@ export function HeroSection() {
           }}
         />
         
-        {/* Updated Name Style: Softer and more delicate */}
+        {/* Name Style: Softer and more delicate */}
         <h1 className="relative text-5xl font-light tracking-[0.2em] text-charcoal/90 font-serif md:text-6xl">
           {"許耀云"}
         </h1>
@@ -49,7 +49,8 @@ export function HeroSection() {
           Alyssa
         </p>
         
-        <p className="relative mt-2 text-sm font-medium tracking-[0.15em] text-charcoal/60 md:text-base">
+        {/* Updated Title Style: Bold for better emphasis */}
+        <p className="relative mt-2 text-sm font-bold tracking-[0.15em] text-charcoal md:text-base">
           {"永續策略顧問 | 科技供應鏈減碳專家"}
         </p>
       </motion.div>
