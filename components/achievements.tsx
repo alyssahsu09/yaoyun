@@ -1,13 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, ShieldCheck, Zap } from "lucide-react"
+import { Layers, ShieldCheck, Zap } from "lucide-react"
 
 const achievements = [
   {
-    icon: Award,
-    title: "DJSI 全球第 2 名",
-    desc: "緯創資通 2022 DJSI 產業評比全球第二實績",
+    icon: Layers,
+    title: "跨產業 ESG 整合",
+    desc: "輔導 20+ 企業客戶，涵蓋科技、金融、製造及生技，打造全方位永續競爭力",
   },
   {
     icon: ShieldCheck,
@@ -16,7 +16,7 @@ const achievements = [
   },
   {
     icon: Zap,
-    title: "雙軸轉型專家",
+    title: "雙軸轉型實踐",
     desc: "結合數位技術與綠色轉型，建立端到端碳管理能力",
   },
 ]
