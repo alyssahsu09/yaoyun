@@ -55,20 +55,20 @@ export function Services() {
                             <service.icon className="h-5 w-5 text-white/90" />
                         </div>
                         <div>
-                            <p className="text-lg font-bold text-white">{service.title}</p>
-                            <p className="text-base text-white/80 mt-1 leading-relaxed">{service.desc}</p>
+                            <p className="text-xl font-black text-white mb-2">{service.title}</p>
+                            <p className="text-lg text-white/95 font-medium leading-relaxed">{service.desc}</p>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div className="my-8 h-px w-full bg-white/10" />
+            <div className="my-10 h-px w-full bg-white/20" />
             
             <div className="grid grid-cols-3 gap-4 text-center">
                 {stats.map((stat) => (
                     <div key={stat.label}>
-                        <p className="text-2xl font-bold text-gold">{stat.value}</p>
-                        <p className="text-xs text-white/60 mt-1 uppercase tracking-wider">{stat.label}</p>
+                        <p className="text-3xl font-black text-gold mb-1">{stat.value}</p>
+                        <p className="text-sm text-white/80 font-bold uppercase tracking-widest">{stat.label}</p>
                     </div>
                 ))}
             </div>

@@ -40,28 +40,28 @@ export function Achievements() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.55 }}
-        className="mb-6 text-center text-sm font-bold uppercase tracking-[0.25em] text-charcoal"
+        className="mb-6 text-center text-xs font-black uppercase tracking-[0.3em] text-charcoal/60"
       >
-        {"核心實績"}
+        {"核心實績 — Achievements"}
       </motion.h2>
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="flex flex-col gap-3"
+        className="flex flex-col gap-5"
       >
         {achievements.map((a) => (
           <motion.div
             key={a.title}
             variants={itemVariants}
-            className="glass-card glass-card-hover group flex items-center gap-5 p-5"
+            className="glass-card glass-card-hover group flex items-center gap-6 p-7"
           >
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/20">
-              <a.icon className="h-6 w-6 text-gold" />
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/15">
+              <a.icon className="h-7 w-7 text-gold drop-shadow-lg" />
             </div>
             <div>
-              <p className="text-base font-bold text-white">{a.title}</p>
-              <p className="text-sm text-white/90 mt-0.5 leading-relaxed">{a.desc}</p>
+              <p className="text-xl font-black text-white mb-1">{a.title}</p>
+              <p className="text-lg text-white/95 font-medium leading-relaxed">{a.desc}</p>
             </div>
           </motion.div>
         ))}

@@ -28,19 +28,19 @@ export function Expertise() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
-      <h2 className="mb-6 text-center text-sm font-bold uppercase tracking-[0.25em] text-charcoal">
-        {"專業領域"}
+      <h2 className="mb-6 text-center text-xs font-black uppercase tracking-[0.3em] text-charcoal/60">
+        {"專業領域 — Expertise"}
       </h2>
-      <div className="glass-card p-7">
-        <div className="flex flex-col gap-6">
+      <div className="glass-card p-8">
+        <div className="flex flex-col gap-8">
           {expertiseItems.map((item) => (
-            <div key={item.title} className="flex items-center gap-5">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20">
-                <item.icon className="h-5 w-5 text-gold" />
+            <div key={item.title} className="flex items-center gap-6">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/15">
+                <item.icon className="h-6 w-6 text-gold shadow-lg" />
               </div>
               <div>
-                <p className="text-base font-bold text-white">{item.title}</p>
-                <p className="text-sm text-white/90 mt-0.5 leading-relaxed">{item.desc}</p>
+                <p className="text-xl font-black text-white mb-1">{item.title}</p>
+                <p className="text-lg text-white/95 font-medium leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}

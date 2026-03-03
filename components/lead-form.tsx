@@ -65,9 +65,7 @@ export function LeadForm() {
   }
 
   const inputClass =
-
-    "w-full rounded-2xl border border-border bg-white px-5 py-3.5 text-base text-charcoal font-medium placeholder:text-warm-gray/50 focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/10 transition-all"
-
+    "w-full rounded-2xl border border-border bg-white px-6 py-4 text-lg text-charcoal font-bold placeholder:text-warm-gray/40 focus:border-teal focus:outline-none focus:ring-4 focus:ring-teal/5 transition-all shadow-sm"
 
   return (
     <motion.section
@@ -75,29 +73,25 @@ export function LeadForm() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
-      <div className="white-card p-8 border-2 border-teal/5">
+      <div className="white-card p-10 border-2 border-teal/5 shadow-2xl">
         {/* Header */}
-        <div className="mb-8 flex items-center gap-4">
-
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-teal/10">
-            <Sprout className="h-5 w-5 text-teal" />
+        <div className="mb-10 flex items-center gap-5">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-teal/10 shadow-inner">
+            <Sprout className="h-7 w-7 text-teal" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-charcoal">
+            <h2 className="text-2xl font-black text-charcoal">
               {"永續體質預約診斷"}
             </h2>
-            <p className="text-sm font-medium text-charcoal/60">{"免費初步諮詢，為您的企業量身規劃"}</p>
-
+            <p className="text-base font-bold text-charcoal/50">{"免費初步諮詢，為您的企業量身規劃"}</p>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           {/* Name */}
           <div>
-
-            <label htmlFor="lead-name" className="mb-2 block text-sm font-bold text-charcoal">
-
-              {"姓名 "}
+            <label htmlFor="lead-name" className="mb-3 block text-base font-black text-charcoal/80 ml-1">
+              {"您的姓名 Name "}
               <span className="text-destructive">*</span>
             </label>
             <input
@@ -106,17 +100,15 @@ export function LeadForm() {
               type="text"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              placeholder="您的姓名"
+              placeholder="請輸入姓名"
               className={inputClass}
             />
           </div>
 
           {/* Company */}
           <div>
-
-            <label htmlFor="lead-company" className="mb-2 block text-sm font-bold text-charcoal">
-
-              {"公司 / 職稱"}
+            <label htmlFor="lead-company" className="mb-3 block text-base font-black text-charcoal/80 ml-1">
+              {"公司名稱 / 職稱"}
             </label>
             <input
               id="lead-company"
@@ -124,17 +116,15 @@ export function LeadForm() {
               type="text"
               value={form.company}
               onChange={(e) => setForm({ ...form, company: e.target.value })}
-              placeholder="公司名稱或職稱"
+              placeholder="請輸入公司或職稱"
               className={inputClass}
             />
           </div>
 
           {/* Email */}
           <div>
-
-            <label htmlFor="lead-email" className="mb-2 block text-sm font-bold text-charcoal">
-
-              {"Email "}
+            <label htmlFor="lead-email" className="mb-3 block text-base font-black text-charcoal/80 ml-1">
+              {"Email 電子郵件 "}
               <span className="text-destructive">*</span>
             </label>
             <input
@@ -143,17 +133,15 @@ export function LeadForm() {
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              placeholder="your@email.com"
+              placeholder="example@company.com"
               className={inputClass}
             />
           </div>
 
           {/* Demand Dropdown */}
           <div>
-
-            <label htmlFor="lead-demand" className="mb-2 block text-sm font-bold text-charcoal">
-
-              {"需求類型 "}
+            <label htmlFor="lead-demand" className="mb-3 block text-base font-black text-charcoal/80 ml-1">
+              {"諮詢需求類型 "}
               <span className="text-destructive">*</span>
             </label>
             <select
@@ -161,12 +149,10 @@ export function LeadForm() {
               name="demand"
               value={form.demand}
               onChange={(e) => setForm({ ...form, demand: e.target.value })}
-              className={`${inputClass} appearance-none`}
+              className={`${inputClass} appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20stroke%3D%22%236B7280%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22m6%208%204%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.25em_1.25em] bg-[right_1rem_center] bg-no-repeat`}
             >
-
-              <option value="" disabled className="text-warm-gray/50">
-
-                {"請選擇諮詢需求"}
+              <option value="" disabled className="text-warm-gray/30">
+                {"請選擇諮詢項目"}
               </option>
               {demandOptions.map((opt) => (
                 <option key={opt} value={opt}>
@@ -180,27 +166,23 @@ export function LeadForm() {
           <button
             type="submit"
             disabled={submitting}
-
-            className="group flex items-center justify-center gap-2.5 rounded-2xl bg-gold px-5 py-4 text-base font-black text-charcoal transition-all duration-300 hover:bg-gold-hover hover:shadow-lg hover:shadow-gold/25 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed mt-2"
-
+            className="group flex items-center justify-center gap-3 rounded-2xl bg-teal px-6 py-5 text-xl font-black text-white shadow-xl shadow-teal/20 transition-all duration-300 hover:bg-teal-light hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 mt-4"
           >
             {submitting ? (
-              <span className="flex items-center gap-2.5">
-                <span className="h-5 w-5 animate-spin rounded-full border-2 border-primary-foreground border-t-transparent" />
+              <span className="flex items-center gap-3">
+                <span className="h-6 w-6 animate-spin rounded-full border-3 border-white border-t-transparent" />
                 {"送出中..."}
               </span>
             ) : (
               <>
-                <Send className="h-5 w-5" />
-                {"送出預約"}
+                <Send className="h-6 w-6" />
+                {"送出診斷預約"}
               </>
             )}
           </button>
 
-
-          <p className="text-center text-xs font-medium text-charcoal/50 leading-relaxed">
-
-            {"送出後資料將安全傳送，Alyssa 會親自回覆您"}
+          <p className="text-center text-sm font-bold text-charcoal/40 leading-relaxed italic">
+            {"送出後資料將加密傳送，Alyssa 會親自回覆您"}
           </p>
         </form>
       </div>
