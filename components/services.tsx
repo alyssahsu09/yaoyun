@@ -47,28 +47,28 @@ export function Services() {
         <h2 className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
             {"核心服務與實績"}
         </h2>
-        <div className="white-card p-8">
+        <div className="glass-card glass-card-hover p-8">
             <div className="flex flex-col gap-8">
                 {services.map((service) => (
                     <div key={service.title} className="flex items-start gap-5">
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10">
-                            <service.icon className="h-5 w-5 text-primary" />
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/12">
+                            <service.icon className="h-5 w-5 text-white/90" />
                         </div>
                         <div>
-                            <p className="text-lg font-bold text-foreground">{service.title}</p>
-                            <p className="text-base text-muted-foreground mt-1 leading-relaxed">{service.desc}</p>
+                            <p className="text-lg font-bold text-white">{service.title}</p>
+                            <p className="text-base text-white/80 mt-1 leading-relaxed">{service.desc}</p>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div className="my-8 h-px w-full bg-border" />
+            <div className="my-8 h-px w-full bg-white/10" />
             
             <div className="grid grid-cols-3 gap-4 text-center">
                 {stats.map((stat) => (
                     <div key={stat.label}>
-                        <p className="text-2xl font-bold text-primary">{stat.value}</p>
-                        <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+                        <p className="text-2xl font-bold text-gold">{stat.value}</p>
+                        <p className="text-xs text-white/60 mt-1 uppercase tracking-wider">{stat.label}</p>
                     </div>
                 ))}
             </div>

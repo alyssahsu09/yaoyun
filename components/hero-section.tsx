@@ -13,8 +13,8 @@ export function HeroSection() {
         transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
         className="relative"
       >
-        <div className="absolute -inset-4 rounded-full bg-primary/10 blur-2xl" />
-        <div className="relative h-36 w-36 overflow-hidden rounded-full shadow-2xl shadow-primary/20 ring-[3px] ring-white/80 md:h-44 md:w-44">
+        <div className="absolute -inset-4 rounded-full bg-teal/12 blur-2xl" />
+        <div className="relative h-36 w-36 overflow-hidden rounded-full shadow-2xl shadow-teal/20 ring-[3px] ring-white/80 md:h-44 md:w-44">
           <Image
             src="/images/alyssa-profile.jpg"
             alt="許耀云 Alyssa 個人照"
@@ -36,24 +36,17 @@ export function HeroSection() {
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-44 w-72 pointer-events-none"
           style={{
-
-            background: "radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 75%)",
+            background: "radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 75%)",
           }}
         />
-        
-        {/* Name Style: Softer and more delicate */}
-        <h1 className="relative text-5xl font-light tracking-[0.2em] text-charcoal/90 font-serif md:text-6xl">
+        <h1 className="relative text-5xl font-black tracking-tight text-charcoal font-serif md:text-6xl">
           {"許耀云"}
         </h1>
-        
-        <p className="relative text-lg font-medium tracking-[0.4em] text-teal/60 md:text-xl uppercase">
+        <p className="relative text-lg font-bold tracking-[0.35em] text-teal md:text-xl">
           Alyssa
         </p>
-        
-        {/* Updated Title Style: Bold for better emphasis */}
-        <p className="relative mt-2 text-sm font-bold tracking-[0.15em] text-charcoal md:text-base">
+        <p className="relative mt-1 text-base font-semibold tracking-wide text-charcoal/80 md:text-lg">
           {"永續策略顧問 | 科技供應鏈減碳專家"}
-
         </p>
       </motion.div>
 
@@ -62,9 +55,7 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-
-        className="text-center font-serif text-lg leading-relaxed tracking-widest text-teal/70 font-light italic md:text-xl"
-
+        className="text-center font-serif text-lg leading-relaxed tracking-wider text-teal font-medium md:text-xl"
       >
         {"「剛柔並濟耀新局，永續賦能云水齊」"}
       </motion.blockquote>
