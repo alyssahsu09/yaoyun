@@ -8,13 +8,12 @@ import { Sprout, Send } from "lucide-react"
 const FORMSPREE_URL = "https://formspree.io/f/mnjbzene"
 
 const demandOptions = [
-  "政府補助",
-  "品牌轉型",
-  "永續報告書",
-  "國際永續評比",
-  "碳盤查/足跡",
-  "BNI 1-on-1",
-  "其他諮詢",
+  "供應鏈減碳諮詢",
+  "ISO 14064/14067 導入",
+  "ESG 報告書編製",
+  "國際永續評比 (DJSI/CDP)",
+  "數位永續轉型",
+  "其他專業諮詢",
 ]
 
 export function LeadForm() {
@@ -66,7 +65,9 @@ export function LeadForm() {
   }
 
   const inputClass =
-    "w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/60 focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+
+    "w-full rounded-2xl border border-border bg-white px-5 py-3.5 text-base text-charcoal font-medium placeholder:text-warm-gray/50 focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/10 transition-all"
+
 
   return (
     <motion.section
@@ -74,24 +75,28 @@ export function LeadForm() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
-      <div className="white-card p-8">
+      <div className="white-card p-8 border-2 border-teal/5">
         {/* Header */}
         <div className="mb-8 flex items-center gap-4">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10">
-            <Sprout className="h-5 w-5 text-primary" />
+
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-teal/10">
+            <Sprout className="h-5 w-5 text-teal" />
           </div>
           <div>
-            <h2 className="text-lg font-bold text-foreground">
+            <h2 className="text-xl font-bold text-charcoal">
               {"永續體質預約診斷"}
             </h2>
-            <p className="text-sm text-muted-foreground">{"免費初步諮詢，為您的企業量身規劃"}</p>
+            <p className="text-sm font-medium text-charcoal/60">{"免費初步諮詢，為您的企業量身規劃"}</p>
+
           </div>
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           {/* Name */}
           <div>
-            <label htmlFor="lead-name" className="mb-2 block text-sm font-medium text-foreground">
+
+            <label htmlFor="lead-name" className="mb-2 block text-sm font-bold text-charcoal">
+
               {"姓名 "}
               <span className="text-destructive">*</span>
             </label>
@@ -108,7 +113,9 @@ export function LeadForm() {
 
           {/* Company */}
           <div>
-            <label htmlFor="lead-company" className="mb-2 block text-sm font-medium text-foreground">
+
+            <label htmlFor="lead-company" className="mb-2 block text-sm font-bold text-charcoal">
+
               {"公司 / 職稱"}
             </label>
             <input
@@ -124,7 +131,9 @@ export function LeadForm() {
 
           {/* Email */}
           <div>
-            <label htmlFor="lead-email" className="mb-2 block text-sm font-medium text-foreground">
+
+            <label htmlFor="lead-email" className="mb-2 block text-sm font-bold text-charcoal">
+
               {"Email "}
               <span className="text-destructive">*</span>
             </label>
@@ -141,7 +150,9 @@ export function LeadForm() {
 
           {/* Demand Dropdown */}
           <div>
-            <label htmlFor="lead-demand" className="mb-2 block text-sm font-medium text-foreground">
+
+            <label htmlFor="lead-demand" className="mb-2 block text-sm font-bold text-charcoal">
+
               {"需求類型 "}
               <span className="text-destructive">*</span>
             </label>
@@ -152,7 +163,9 @@ export function LeadForm() {
               onChange={(e) => setForm({ ...form, demand: e.target.value })}
               className={`${inputClass} appearance-none`}
             >
-              <option value="" disabled className="text-muted-foreground/60">
+
+              <option value="" disabled className="text-warm-gray/50">
+
                 {"請選擇諮詢需求"}
               </option>
               {demandOptions.map((opt) => (
@@ -167,7 +180,9 @@ export function LeadForm() {
           <button
             type="submit"
             disabled={submitting}
-            className="group flex items-center justify-center gap-2.5 rounded-xl bg-primary px-5 py-4 text-base font-bold text-primary-foreground transition-all duration-300 hover:opacity-90 hover:shadow-lg hover:shadow-primary/25 active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed mt-2"
+
+            className="group flex items-center justify-center gap-2.5 rounded-2xl bg-gold px-5 py-4 text-base font-black text-charcoal transition-all duration-300 hover:bg-gold-hover hover:shadow-lg hover:shadow-gold/25 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed mt-2"
+
           >
             {submitting ? (
               <span className="flex items-center gap-2.5">
@@ -182,7 +197,9 @@ export function LeadForm() {
             )}
           </button>
 
-          <p className="text-center text-xs text-muted-foreground/80 leading-relaxed">
+
+          <p className="text-center text-xs font-medium text-charcoal/50 leading-relaxed">
+
             {"送出後資料將安全傳送，Alyssa 會親自回覆您"}
           </p>
         </form>

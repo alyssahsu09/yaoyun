@@ -36,17 +36,24 @@ export function HeroSection() {
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-44 w-72 pointer-events-none"
           style={{
-            background: "radial-gradient(circle, hsl(var(--secondary) / 0.15) 0%, transparent 75%)",
+
+            background: "radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 75%)",
           }}
         />
-        <h1 className="relative text-5xl font-black tracking-tight text-foreground md:text-6xl">
+        
+        {/* Name Style: Softer and more delicate */}
+        <h1 className="relative text-5xl font-light tracking-[0.2em] text-charcoal/90 font-serif md:text-6xl">
           {"許耀云"}
         </h1>
-        <p className="relative text-lg font-semibold tracking-[0.35em] text-primary/80 md:text-xl">
+        
+        <p className="relative text-lg font-medium tracking-[0.4em] text-teal/60 md:text-xl uppercase">
           Alyssa
         </p>
-        <p className="relative mt-1 text-sm font-medium tracking-[0.18em] text-muted-foreground md:text-base">
-          {"永續策略顧問 ESG Consultant"}
+        
+        {/* Updated Title Style: Bold for better emphasis */}
+        <p className="relative mt-2 text-sm font-bold tracking-[0.15em] text-charcoal md:text-base">
+          {"永續策略顧問 | 科技供應鏈減碳專家"}
+
         </p>
       </motion.div>
 
@@ -55,7 +62,9 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className="text-center text-lg leading-relaxed tracking-wider text-muted-foreground md:text-xl"
+
+        className="text-center font-serif text-lg leading-relaxed tracking-widest text-teal/70 font-light italic md:text-xl"
+
       >
         {"「剛柔並濟耀新局，永續賦能云水齊」"}
       </motion.blockquote>
