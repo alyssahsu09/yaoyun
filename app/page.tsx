@@ -5,6 +5,8 @@ import { Achievements } from "@/components/achievements"
 import { CopyEmail } from "@/components/copy-email"
 import { LeadForm } from "@/components/lead-form"
 import { StickyFooter } from "@/components/sticky-footer"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 
 export default function Home() {
   return (
@@ -21,6 +23,24 @@ export default function Home() {
 
         {/* Major Achievements */}
         <Achievements />
+
+        {/* Pricing Link Button - Metallic Gold Theme */}
+        <div className="flex justify-center -mt-4">
+          <Link 
+            href="/pricing" 
+            className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-bold transition-all active:scale-95 text-charcoal shadow-[0_10px_20px_-5px_rgba(212,175,55,0.3),inset_0_1px_0_rgba(255,255,255,0.4)] border border-[#C9A030]/50 relative overflow-hidden group"
+            style={{
+              background: "linear-gradient(135deg, #EAD2AC 0%, #D4AF37 45%, #C9A030 55%, #B8860B 100%)"
+            }}
+          >
+            {/* Shimmer Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+            
+            <span className="relative z-10 flex items-center gap-2">
+              查看服務費用 <ArrowRight className="w-4 h-4" />
+            </span>
+          </Link>
+        </div>
 
         {/* Contact: Email Copy */}
         <CopyEmail />
