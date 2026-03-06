@@ -46,7 +46,9 @@ export default function Home() {
         <CopyEmail />
 
         {/* Lead Generation Form */}
-        <LeadForm />
+        <div id="contact">
+          <LeadForm />
+        </div>
 
         {/* Footer */}
         <footer className="flex flex-col items-center gap-3 pt-8 pb-4 text-center">
