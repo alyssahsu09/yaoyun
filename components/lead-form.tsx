@@ -52,6 +52,19 @@ export function LeadForm() {
       })
 
       if (res.ok) {
+        // P20 CRM fire-and-forget
+        fetch("https://rsun.me/api/webhook/lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            token: "tok_0bxd21bebj3e",
+            name: form.name,
+            email: form.email,
+            phone: "",
+            message: `${form.demand}${form.company ? ` | ${form.company}` : ""}`,
+          }),
+        }).catch(() => {})
+
         toast.success("已成功送出！Alyssa 將盡快與您聯繫。")
         setForm({ name: "", company: "", email: "", demand: "" })
       } else {
