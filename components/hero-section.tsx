@@ -46,7 +46,7 @@ export function HeroSection() {
           Alyssa
         </p>
         <p className="relative mt-1 text-base font-semibold tracking-wide text-charcoal/80 md:text-lg">
-          {"永續策略顧問 | 科技供應鏈減碳專家"}
+          {"永續策略顧問"}
         </p>
       </motion.div>
 

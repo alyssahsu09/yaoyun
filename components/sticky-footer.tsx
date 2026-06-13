@@ -16,7 +16,7 @@ export function StickyFooter() {
         className="relative w-full max-w-md"
       >
         <a
-          href="https://line.me/ti/p/Wy6nL8MNfS"
+          href="https://line.me/ti/p/LxU_xyd_LR"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#06C755] px-8 py-5 text-xl font-black text-white shadow-[0_12px_40px_rgba(6,199,85,0.4)] backdrop-blur-md transition-all duration-300 hover:scale-105 active:scale-[0.95] hover:bg-[#05b34c]"
